@@ -1,0 +1,14 @@
+{
+    "name": "hexlet/code",
+    "description": "First project on Hexlet!",
+    "type": "project",
+    "license": "Hexlet",
+    "authors": [
+        {
+            "name": "IgorSerebryakov",
+            "email": "serebryakov09@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
