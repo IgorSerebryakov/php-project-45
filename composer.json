@@ -1,8 +1,9 @@
 {
     "name": "hexlet/code",
+    "bin": ["bin/brain-games"],
     "description": "First project on Hexlet!",
     "type": "project",
-    "license": "Hexlet",
+    "license": "MIT",
     "authors": [
         {
             "name": "IgorSerebryakov",
