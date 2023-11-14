@@ -11,5 +11,12 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.21"
+    },
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    }
 }
