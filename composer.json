@@ -1,6 +1,8 @@
 {
     "name": "hexlet/code",
-    "bin": ["bin/brain-games"],
+    "bin": ["bin/brain-games",
+            "bin/brain-even"
+    ],
     "description": "First project on Hexlet!",
     "type": "project",
     "license": "MIT",
@@ -16,7 +18,7 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/ParityCheck.php"
         ]
     },
     "require-dev": {

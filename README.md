@@ -3,3 +3,6 @@
 
 ### Maintainability:
 <a href="https://codeclimate.com/github/IgorSerebryakov/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/e552f5d3ed83069eaca8/maintainability" /></a>
+
+### Asciinema
+https://asciinema.org/a/ucNe33b7SLNBILd7I6Yzxpxas
