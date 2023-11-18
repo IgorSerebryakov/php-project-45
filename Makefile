@@ -12,3 +12,6 @@ lint: # start phpcs
 
 brain-even: # start game
 	./bin/brain-even
+
+brain-calc: # start game
+	./bin/brain-calc
