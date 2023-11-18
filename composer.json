@@ -3,7 +3,8 @@
     "bin": ["bin/brain-games",
             "bin/brain-even",
             "bin/brain-calc",
-            "bin/brain-gcd"
+            "bin/brain-gcd",
+            "bin/brain-progression"
     ],
     "description": "First project on Hexlet!",
     "type": "project",
@@ -24,7 +25,8 @@
             "src/Games/Even.php",
             "src/Engine.php",
             "src/Games/Calc.php",
-            "src/Games/GCD.php"
+            "src/Games/GCD.php",
+            "src/Games/Progression.php"
         ]
     },
     "require-dev": {

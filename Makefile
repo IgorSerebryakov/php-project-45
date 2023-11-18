@@ -18,3 +18,6 @@ brain-calc: # start game
 
 brain-gcd: # start game
 	./bin/brain-gcd
+
+brain-progression: # start game
+	./bin/brain-progression
