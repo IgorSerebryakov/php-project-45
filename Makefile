@@ -15,3 +15,6 @@ brain-even: # start game
 
 brain-calc: # start game
 	./bin/brain-calc
+
+brain-gcd: # start game
+	./bin/brain-gcd
