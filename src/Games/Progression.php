@@ -22,8 +22,9 @@ function progression()
     sample($question, $round);
 }
 
-function getProgression($lenProg, $startElem, $step)
+function getProgression(int $lenProg, int $startElem, int $step)
 {
+    $progression = [];
     $progression[] = $startElem;
     $nextChar = $startElem;
     for ($i = 0; $i <= $lenProg; $i++) {

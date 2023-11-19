@@ -18,7 +18,7 @@ function gcd()
     sample($question, $rounds);
 }
 
-function findgcd($x, $y)
+function findgcd(int $x, int $y)
 {
     while ($x != $y) {
         if ($x > $y) {
