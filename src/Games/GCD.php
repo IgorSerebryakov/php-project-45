@@ -12,7 +12,7 @@ function gcd()
         $num_1 = rand(0, 100);
         $num_2 = rand(0, 100);
         $gcd = findgcd($num_1, $num_2);
-        $example = "$num_1 $num_2";
+        $example = "{$num_1} {$num_2}";
         $rounds[$example] = $gcd;
     }
     sample($question, $rounds);

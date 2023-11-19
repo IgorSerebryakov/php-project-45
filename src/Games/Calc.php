@@ -13,17 +13,17 @@ function calc()
         $num_2 = rand(0, 100);
         switch ($i) {
             case 0:
-                $example = "$num_1 + $num_2";
+                $example = "{$num_1} + {$num_2}";
                 $correctAnswer = $num_1 + $num_2;
                 $rounds[$example] = $correctAnswer;
                 break;
             case 1:
-                $example = "$num_1 - $num_2";
+                $example = "{$num_1} - {$num_2}";
                 $correctAnswer = $num_1 - $num_2;
                 $rounds[$example] = $correctAnswer;
                 break;
             case 2:
-                $example = "$num_1 * $num_2";
+                $example = "{$num_1} * {$num_2}";
                 $correctAnswer = $num_1 * $num_2;
                 $rounds[$example] = $correctAnswer;
                 break;
