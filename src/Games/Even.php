@@ -6,7 +6,7 @@ use function BrainGames\Engine\sample;
 
 function isEven()
 {
-    $question = "Answer \"yes\" if the number is even? otherwise answer \"no\".";
+    $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $rounds = [];
     for ($i = 0; $i <= 2; $i++) {
         $num = rand(0, 100);
