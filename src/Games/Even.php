@@ -12,6 +12,6 @@ function isEven()
         $num = rand(0, 100);
         $num % 2 == 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
         $rounds[$num] = $correctAnswer;
-        }
+    }
     sample($question, $rounds);
 }
