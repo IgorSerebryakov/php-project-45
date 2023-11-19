@@ -6,7 +6,7 @@ use function BrainGames\Engine\sample;
 
 function prime()
 {
-    $question = "Answer \"yes\" if given number prime. Otherwise answer \"no\".";
+    $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $rounds = [];
     for ($i = 0; $i <= 2; $i++) {
         $num = rand(0, 10000);
