@@ -4,22 +4,22 @@ namespace BrainGames\Prime;
 
 use function BrainGames\Engine\sample;
 
-function start()
+function prime()
 {
     $question = "Answer \"yes\" if given number prime. Otherwise answer \"no\".";
-    $round = [];
+    $rounds = [];
     for ($i = 0; $i <= 2; $i++) {
-        $char = rand(0, 10000);
-        $correct = isPrime($char);
-        $round[$char] = $correct;
+        $num = rand(0, 10000);
+        $correctAnswer = isPrime($num);
+        $rounds[$num] = $correctAnswer;
     }
-    sample($question, $round);
+    sample($question, $rounds);
 }
 
-function isPrime($char)
+function isPrime($num)
 {
-    for ($i = 2; $i <= $char; $i++) {
-        if ($char % $i == 0 && $char != $i) {
+    for ($i = 2; $i <= $num; $i++) {
+        if ($num % $i == 0 && $num != $i) {
             $result = "no";
             break;
         } else {

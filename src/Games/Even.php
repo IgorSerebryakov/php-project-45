@@ -4,14 +4,14 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\sample;
 
-function start()
+function isEven()
 {
     $question = "Answer \"yes\" if the number is even? otherwise answer \"no\".";
-    $round = [];
+    $rounds = [];
     for ($i = 0; $i <= 2; $i++) {
-        $example = rand(0, 100);
-        $example % 2 == 0 ? $correct = "yes" : $correct = "no";
-        $round[$example] = $correct;
+        $num = rand(0, 100);
+        $num % 2 == 0 ? $correctAnswer = "yes" : $correctAnswer = "no";
+        $rounds[$num] = $correctAnswer;
         }
-    sample($question, $round);
+    sample($question, $rounds);
 }

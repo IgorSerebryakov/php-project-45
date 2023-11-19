@@ -4,18 +4,18 @@ namespace BrainGames\GCD;
 
 use function BrainGames\Engine\sample;
 
-function start()
+function gcd()
 {
     $question = "Find the greatest common divisor of given numbers.";
-    $round = [];
+    $rounds = [];
     for ($i = 0; $i <= 2; $i++) {
-        $number_1 = rand(0, 100);
-        $number_2 = rand(0, 100);
-        $gcd = findgcd($number_1, $number_2);
-        $example = "$number_1 $number_2";
-        $round[$example] = $gcd;
+        $num_1 = rand(0, 100);
+        $num_2 = rand(0, 100);
+        $gcd = findgcd($num_1, $num_2);
+        $example = "$num_1 $num_2";
+        $rounds[$example] = $gcd;
     }
-    sample($question, $round);
+    sample($question, $rounds);
 }
 
 function findgcd($x, $y)
@@ -29,4 +29,3 @@ function findgcd($x, $y)
     }
     return $x;
 }
-

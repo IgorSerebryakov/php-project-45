@@ -4,16 +4,16 @@ namespace BrainGames\Progression;
 
 use function BrainGames\Engine\sample;
 
-function start()
+function progression()
 {
     $question = "What number is missing in the progression?";
     $round = [];
     for ($i = 0; $i <= 2; $i++) {
-        $startChar = rand(0, 10);
+        $startElem = rand(0, 10);
         $lenProg = rand(5, 10);
         $PosHiddenElem = rand(0, $lenProg);
         $step = rand(1, 5);
-        $progression = getProgression($lenProg, $startChar, $step);
+        $progression = getProgression($lenProg, $startElem, $step);
         $correct = $progression[$PosHiddenElem];
         $progression[$PosHiddenElem] = "..";
         $example = implode(" ", $progression);
@@ -22,10 +22,10 @@ function start()
     sample($question, $round);
 }
 
-function getProgression($lenProg, $startChar, $step)
+function getProgression($lenProg, $startElem, $step)
 {
-    $progression[] = $startChar;
-    $nextChar = $startChar;
+    $progression[] = $startElem;
+    $nextChar = $startElem;
     for ($i = 0; $i <= $lenProg; $i++) {
         $nextChar = $nextChar + $step;
         $progression[] = $nextChar;
