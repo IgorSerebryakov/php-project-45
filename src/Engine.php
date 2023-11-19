@@ -12,7 +12,7 @@ function sample(string $question, array $rounds)
     line("Hello, %s!", $name);
     line($question);
     foreach ($rounds as $example => $correctAnswer) {
-        line("Question: %s", $example);
+        line("Question: {$example}");
         $answer = prompt("Your answer");
         if ($answer == $correctAnswer) {
             line("Correct!");
