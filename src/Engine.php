@@ -5,14 +5,18 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function sample(string $question, array $rounds)
+const ROUNDS_COUNT = 3;
+
+function getExecution(string $description, array $rounds): void
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?", "", " ");
     line("Hello, %s!", $name);
-    line($question);
-    foreach ($rounds as $example => $correctAnswer) {
-        line("Question: {$example}");
+
+    line($description);
+
+    foreach ($rounds as $task => $correctAnswer) {
+        line("Question: {$task}");
         $answer = prompt("Your answer");
         if ($answer == $correctAnswer) {
             line("Correct!");
@@ -22,5 +26,6 @@ function sample(string $question, array $rounds)
             exit;
         }
     }
+
     line("Congratulations, %s!", $name);
 }

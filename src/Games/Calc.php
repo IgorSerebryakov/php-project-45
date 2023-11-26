@@ -2,32 +2,43 @@
 
 namespace BrainGames\Calc;
 
-use function BrainGames\Engine\sample;
+use function BrainGames\Engine\getExecution;
 
-function calc()
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+const DESCRIPTION = "What is the result of the expression?";
+
+function startCalc(): void
 {
-    $question = "What is the result of the expression?";
     $rounds = [];
-    for ($i = 0; $i <= 2; $i++) {
-        $num_1 = rand(0, 100);
-        $num_2 = rand(0, 100);
-        switch ($i) {
-            case 0:
-                $example = "{$num_1} + {$num_2}";
-                $correctAnswer = $num_1 + $num_2;
-                $rounds[$example] = $correctAnswer;
-                break;
-            case 1:
-                $example = "{$num_1} - {$num_2}";
-                $correctAnswer = $num_1 - $num_2;
-                $rounds[$example] = $correctAnswer;
-                break;
-            case 2:
-                $example = "{$num_1} * {$num_2}";
-                $correctAnswer = $num_1 * $num_2;
-                $rounds[$example] = $correctAnswer;
-                break;
-        }
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $mathOperators = ['+', '-', '*'];
+        $firstNum = rand(0, 20);
+        $secondNum = rand(0, 20);
+        $operator = $mathOperators[$i];
+
+        $task = "{$firstNum} {$operator} {$secondNum}";
+        $calcResult = calculate($firstNum, $secondNum, $operator);
+
+        $rounds[$task] = $calcResult;
     }
-    sample($question, $rounds);
+
+    getExecution(DESCRIPTION, $rounds);
+}
+
+function calculate($firstNum, $secondNum, $operator)
+{
+    switch ($operator) {
+        case '+':
+            $result = $firstNum + $secondNum;
+            break;
+        case '-':
+            $result = $firstNum - $secondNum;
+            break;
+        case '*':
+            $result = $firstNum * $secondNum;
+            break;
+    }
+
+    return $result;
 }

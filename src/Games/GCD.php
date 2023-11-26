@@ -2,30 +2,34 @@
 
 namespace BrainGames\GCD;
 
-use function BrainGames\Engine\sample;
+use function BrainGames\Engine\getExecution;
 
-function gcd()
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+const DESCRIPTION = "Find the greatest common divisor of given numbers.";
+function startGCD(): void
 {
-    $question = "Find the greatest common divisor of given numbers.";
     $rounds = [];
-    for ($i = 0; $i <= 2; $i++) {
-        $num_1 = rand(0, 100);
-        $num_2 = rand(0, 100);
-        $gcd = findgcd($num_1, $num_2);
-        $example = "{$num_1} {$num_2}";
-        $rounds[$example] = $gcd;
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $firstNum = rand(0, 100);
+        $secondNum = rand(0, 100);
+        $gcd = findGCD($firstNum, $secondNum);
+        $task = "{$firstNum} {$secondNum}";
+        $rounds[$task] = $gcd;
     }
-    sample($question, $rounds);
+
+    getExecution(DESCRIPTION, $rounds);
 }
 
-function findgcd(int $x, int $y)
+function findGCD(int $firstNum, int $secondNum): int
 {
-    while ($x != $y) {
-        if ($x > $y) {
-            $x = $x - $y;
+    while ($firstNum != $secondNum) {
+        if ($firstNum > $secondNum) {
+            $firstNum = $firstNum - $secondNum;
         } else {
-            $y = $y - $x;
+            $secondNum = $secondNum - $firstNum;
         }
     }
-    return $x;
+
+    return $firstNum;
 }

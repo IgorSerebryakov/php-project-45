@@ -2,34 +2,42 @@
 
 namespace BrainGames\Progression;
 
-use function BrainGames\Engine\sample;
+use function BrainGames\Engine\getExecution;
 
-function progression()
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+const DESCRIPTION = "What number is missing in the progression?";
+function startProgression(): void
 {
-    $question = "What number is missing in the progression?";
     $round = [];
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $startElem = rand(0, 10);
-        $lenProg = rand(5, 10);
-        $PosHiddenElem = rand(0, $lenProg);
+        $lenProgression = rand(5, 10);
+        $PosHiddenElem = rand(0, $lenProgression);
         $step = rand(1, 5);
-        $progression = getProgression($lenProg, $startElem, $step);
-        $correct = $progression[$PosHiddenElem];
+
+        $progression = getProgression($lenProgression, $startElem, $step);
+
+        $hiddenElem = $progression[$PosHiddenElem];
         $progression[$PosHiddenElem] = "..";
-        $example = implode(" ", $progression);
-        $round[$example] = $correct;
+
+        $task = implode(" ", $progression);
+        $round[$task] = $hiddenElem;
     }
-    sample($question, $round);
+
+    getExecution(DESCRIPTION, $round);
 }
 
-function getProgression(int $lenProg, int $startElem, int $step)
+function getProgression(int $lenProgression, int $startElem, int $step): array
 {
     $progression = [];
     $progression[] = $startElem;
     $nextChar = $startElem;
-    for ($i = 0; $i <= $lenProg; $i++) {
+
+    for ($i = 0; $i <= $lenProgression; $i++) {
         $nextChar = $nextChar + $step;
         $progression[] = $nextChar;
     }
+
     return $progression;
 }
