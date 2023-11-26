@@ -14,7 +14,7 @@ function startEven()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num = rand(1, 100);
         $correctAnswer = isEven($num);
-        $rounds[$num] = $correctAnswer;
+        $rounds["{$num}"] = $correctAnswer;
     }
 
     getExecution(DESCRIPTION, $rounds);
