@@ -11,8 +11,8 @@ function startGCD()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $firstNum = rand(0, 100);
-        $secondNum = rand(0, 100);
+        $firstNum = rand(1, 100);
+        $secondNum = rand(1, 100);
         $gcd = findGCD($firstNum, $secondNum);
         $task = "{$firstNum} {$secondNum}";
         $rounds[$task] = $gcd;
