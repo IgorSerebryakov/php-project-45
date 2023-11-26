@@ -11,7 +11,7 @@ function startPrime()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $num = rand(2, 20);
+        $num = rand(2, 100);
         $correctAnswer = isPrime($num);
         $rounds[$num] = $correctAnswer;
     }
