@@ -7,7 +7,7 @@ use function BrainGames\Engine\getExecution;
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = "What number is missing in the progression?";
-function startProgression(): void
+function startProgression()
 {
     $round = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
@@ -28,7 +28,7 @@ function startProgression(): void
     getExecution(DESCRIPTION, $round);
 }
 
-function getProgression(int $lenProgression, int $startElem, int $step): array
+function getProgression(int $lenProgression, int $startElem, int $step)
 {
     $progression = [];
     $progression[] = $startElem;

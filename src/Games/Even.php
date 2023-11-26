@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function startEven(): void
+function startEven()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
@@ -20,7 +20,7 @@ function startEven(): void
     getExecution(DESCRIPTION, $rounds);
 }
 
-function isEven($num): string
+function isEven(int $num)
 {
     return $num % 2 == 0 ? "yes" : "no";
 }

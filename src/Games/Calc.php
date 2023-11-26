@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = "What is the result of the expression?";
 
-function startCalc(): void
+function startCalc()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
@@ -26,8 +26,9 @@ function startCalc(): void
     getExecution(DESCRIPTION, $rounds);
 }
 
-function calculate($firstNum, $secondNum, $operator)
+function calculate(int $firstNum, int $secondNum, string $operator)
 {
+    $result = 0;
     switch ($operator) {
         case '+':
             $result = $firstNum + $secondNum;
