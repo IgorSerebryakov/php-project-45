@@ -17,11 +17,11 @@ function getExecution(string $description, array $rounds): void
 
     foreach ($rounds as $task => $correctAnswer) {
         line("Question: {$task}");
-        $answer = prompt("Your answer");
-        if ($answer == $correctAnswer) {
+        $playerAnswer = prompt("Your answer");
+        if ($playerAnswer == $correctAnswer) {
             line("Correct!");
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
+            line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, %s!", $name);
             exit;
         }
