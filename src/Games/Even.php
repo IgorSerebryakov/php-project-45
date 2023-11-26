@@ -12,7 +12,7 @@ function startEven()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $num = rand(1, 20);
+        $num = rand(1, 100);
         $correctAnswer = isEven($num);
         $rounds[$num] = $correctAnswer;
     }
