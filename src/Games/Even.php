@@ -8,12 +8,12 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function startEven()
+function startEvenGame()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num = rand(1, 100);
-        $correctAnswer = isEven($num);
+        $correctAnswer = isEven($num) ? "yes" : "no";
         $rounds["{$num}"] = $correctAnswer;
     }
 
@@ -22,5 +22,5 @@ function startEven()
 
 function isEven(int $num)
 {
-    return $num % 2 == 0 ? "yes" : "no";
+    return $num % 2 == 0;
 }

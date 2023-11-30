@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = "What is the result of the expression?";
 
-function startCalc()
+function startCalcGame()
 {
     $rounds = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
